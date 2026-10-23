@@ -131,4 +131,6 @@ python -m src.cli chunk --strategy semantic
 
 Discuss: Which chunk contains the database saturation threshold *and* relevant mitigation steps? Which strategy makes it easiest to cite a specific runbook section? For this structured Markdown catalog, **heading-aware recursive splitting** is our teachable default; it is not a blanket production recommendation.
 
+**Reference** - https://www.nb-data.com/p/9-chunking-strategis-to-improve-rag
+
 **Next:** [04 — Embeddings](04-embeddings.md). [Chunking documentation](../references.md).
