@@ -1,37 +1,34 @@
 # Enterprise RAG and Agentic RAG: Engineering Workshop
 
-**Duration:** 150 minutes (2 hours 30 minutes) | **Audience:** Python engineers, platform engineers, ML engineers, solution architects | **Case:** Northstar Payments incident-response knowledge copilot
 
 This is a self-contained, GitHub-ready workshop. All documents and organisations in the exercise are **synthetic**. The code is deliberately small enough to inspect during class; the operational controls described in the lessons are required before adapting it to real enterprise data.
 
-## What participants will build
+## What you will build
 
 1. Load Markdown, TXT, searchable PDF and DOCX knowledge sources with traceable metadata.
-2. Compare **eleven** chunking patterns, including structure-aware, semantic, parent–child, table-aware and code-aware strategies.
+2. Compare **eleven** chunking patterns, including structure aware, semantic, parent–child, table aware and code aware strategies.
 3. Create normalized embeddings and index them in a persistent local vector database.
-4. Retrieve using filtered dense, keyword and hybrid search; assemble cited, token-budgeted context.
+4. Retrieve using filtered dense, keyword and hybrid search; assemble cited, token budgeted context.
 5. Generate a grounded answer, decline unsupported questions, and validate citation identifiers.
 6. Extend this to a **read-only, bounded tool-using agent** that searches runbooks and policy documents as needed.
 7. Run offline unit tests and a retrieval evaluation set. Complete a separate assessed assignment.
 
 ## 150-minute facilitator schedule
 
-| Elapsed | Lesson | Duration | Live activity |
+Lesson | | Live activity |
 |---|---|---:|---|
-| 00:00–00:10 | [01 — Use case and architecture](lessons/01-enterprise-use-case-and-architecture.md) | 10 min | Trace a complex incident question |
-| 00:10–00:25 | [02 — Document loading](lessons/02-document-loading.md) | 15 min | Inspect source metadata and retired policies |
-| 00:25–00:50 | [03 — Text chunking strategies](lessons/03-text-chunking.md) | 25 min | Compare boundaries, overlap and citations |
-| 00:50–01:05 | [04 — Embeddings](lessons/04-embeddings.md) | 15 min | Inspect nearest neighbours |
-| 01:05–01:20 | [05 — Vector databases](lessons/05-vector-databases.md) | 15 min | Index knowledge and enforce metadata filters |
-| 01:20–01:35 | [06 — Similarity search](lessons/06-similarity-and-hybrid-search.md) | 15 min | Compare cosine, BM25 and RRF |
-| 01:35–01:45 | [07 — Relevant context](lessons/07-context-retrieval.md) | 10 min | Build an evidence packet within a token budget |
-| 01:45–02:00 | [08 — Grounded answers](lessons/08-grounded-answer-generation.md) | 15 min | Answer with citations and abstention |
-| 02:00–02:20 | [09 — Agentic RAG](lessons/09-agentic-rag.md) | 20 min | Multi-tool incident investigation |
-| 02:20–02:30 | [10 — Evaluation and enterprise hardening](lessons/10-evaluation-security-and-operations.md) | 10 min | Run tests, examine failure modes |
+[01 — Use case and architecture](lessons/01-enterprise-use-case-and-architecture.md) | | Trace a complex incident question |
+[02 — Document loading](lessons/02-document-loading.md) | | Inspect source metadata and retired policies |
+[03 — Text chunking strategies](lessons/03-text-chunking.md) || Compare boundaries, overlap and citations |
+[04 — Embeddings](lessons/04-embeddings.md) || Inspect nearest neighbours |
+[05 — Vector databases](lessons/05-vector-databases.md) | | Index knowledge and enforce metadata filters |
+[06 — Similarity search](lessons/06-similarity-and-hybrid-search.md) || Compare cosine, BM25 and RRF |
+[07 — Relevant context](lessons/07-context-retrieval.md) | | Build an evidence packet within a token budget |
+[08 — Grounded answers](lessons/08-grounded-answer-generation.md) || Answer with citations and abstention |
+[09 — Agentic RAG](lessons/09-agentic-rag.md) || Multi-tool incident investigation |
+[10 — Evaluation and enterprise hardening](lessons/10-evaluation-security-and-operations.md) || Run tests, examine failure modes |
 
-The [participant exercise](exercises/PARTICIPANT_EXERCISE.md) is a **post-session submission**, estimated at 2–4 additional hours; it is not counted inside the 150 minutes.
-
-**Facilitator preflight (before the timed session):** create the virtual environment; install and approve dependencies; warm the embedding-model cache; run unit tests, indexing and one search; verify any hosted LLM account/model access; and preload a saved demo output for a network-constrained classroom. Allow 30–60 minutes of setup depending on connectivity and devices. The teaching schedule assumes this preparation is complete.
+The [Exercise](exercises/PARTICIPANT_EXERCISE.md) is a **post-session submission**, estimated at 2–4 additional hours; it is not counted inside this session.
 
 ## Quick start
 
