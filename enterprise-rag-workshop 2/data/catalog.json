@@ -1,0 +1,23 @@
+[
+  {
+    "doc_id": "RUN-PAY-101", "file": "knowledge/payments-api-p1-runbook.md", "title": "Payments API P1 Incident Runbook", "doc_type": "runbook", "service": "payments-api", "version": "3.2", "effective_date": "2026-07-01", "status": "active", "tenant_id": "northstar-demo", "classification": "internal", "allowed_roles": ["engineer", "operator"]
+  },
+  {
+    "doc_id": "RUN-DB-201", "file": "knowledge/database-pool-runbook.md", "title": "Database Connection Pool Saturation Runbook", "doc_type": "runbook", "service": "payments-api", "version": "2.1", "effective_date": "2026-08-05", "status": "active", "tenant_id": "northstar-demo", "classification": "internal", "allowed_roles": ["engineer", "operator"]
+  },
+  {
+    "doc_id": "POL-CHG-010", "file": "knowledge/emergency-change-policy.md", "title": "Emergency Production Change Policy", "doc_type": "policy", "service": "shared", "version": "4.0", "effective_date": "2026-06-15", "status": "active", "tenant_id": "northstar-demo", "classification": "internal", "allowed_roles": ["engineer", "operator", "manager"]
+  },
+  {
+    "doc_id": "POL-SLO-020", "file": "knowledge/severity-and-slo-policy.md", "title": "Incident Severity and Communication Policy", "doc_type": "policy", "service": "shared", "version": "2.3", "effective_date": "2026-07-12", "status": "active", "tenant_id": "northstar-demo", "classification": "internal", "allowed_roles": ["engineer", "operator", "manager"]
+  },
+  {
+    "doc_id": "PM-2026-071", "file": "knowledge/pool-exhaustion-postmortem.md", "title": "July 2026 Database Pool Incident Review", "doc_type": "postmortem", "service": "payments-api", "version": "1.0", "effective_date": "2026-07-17", "status": "active", "tenant_id": "northstar-demo", "classification": "internal", "allowed_roles": ["engineer", "manager"]
+  },
+  {
+    "doc_id": "RUN-PAY-OLD", "file": "knowledge/retired-rollback-procedure.md", "title": "Retired Payments Rollback Procedure", "doc_type": "runbook", "service": "payments-api", "version": "1.0", "effective_date": "2024-01-01", "status": "retired", "tenant_id": "northstar-demo", "classification": "internal", "allowed_roles": ["engineer", "operator"]
+  },
+  {
+    "doc_id": "SEC-FRAUD-009", "file": "knowledge/restricted-fraud-alert.md", "title": "Restricted Fraud Detection Alert Procedure", "doc_type": "runbook", "service": "fraud-service", "version": "1.4", "effective_date": "2026-09-01", "status": "active", "tenant_id": "northstar-demo", "classification": "restricted", "allowed_roles": ["security"]
+  }
+]
