@@ -22,7 +22,7 @@ An entire 100-page policy is too diffuse to retrieve as one embedding. A 20-word
 | 10. Code-fence aware | Preserve fenced code blocks | Better than prose split for scripts | Large functions need AST parser |
 | 11. Parent–child / small-to-big | Index small child; display authorised larger parent | Precision + explanation context | Re-expansion must preserve ACLs |
 
-### More advanced families (not covered by the fixed workshop runtime)
+### More advanced families (not covered in this session)
 
 - **Layout/page/element aware:** preserve PDF reading order, headings, captions and table geometry (often requires layout models/OCR).
 - **AST/symbol aware:** chunk functions, classes and imports for repositories; preserve dependency paths.
