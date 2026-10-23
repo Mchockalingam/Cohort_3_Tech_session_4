@@ -13,7 +13,7 @@ This is a self-contained, GitHub-ready workshop. All documents and organisations
 6. Extend this to a **read-only, bounded tool-using agent** that searches runbooks and policy documents as needed.
 7. Run offline unit tests and a retrieval evaluation set. Complete a separate assessed assignment.
 
-## 150-minute facilitator schedule
+## What are we covering
 
 Lesson | | Live activity |
 |---|---|---:|---|
