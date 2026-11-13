@@ -1,0 +1,4 @@
+ORIGINAL behaviour (truncate=True, unmerged): sources=10 tokens=1195 dropped=[]
+  last line: 'Verify pool utilization falls below **75%** and payment error rate below **1%** for at'
+FIXED behaviour (truncate=False, unmerged): sources=9 tokens=1106 dropped=['RUN-DB-201']
+  last line: 'P1 on-call acknowledgement target: **10 minutes**. The incident commander owns coordination. Provide an approved customer-facing update at least **every 30 minutes** while the P1 remains open. Updates must not include credentials or personally identifiable information.'

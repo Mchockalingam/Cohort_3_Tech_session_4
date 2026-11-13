@@ -1,0 +1,2 @@
+Upserted 28 active chunks; collection count=28.
+Retired material is excluded. Rebuild/rename the collection if versions or models change.

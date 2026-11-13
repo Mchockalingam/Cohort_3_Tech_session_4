@@ -1,0 +1,222 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1173.28it/s]
+[S1] doc_id=RUN-PAY-101 | title=Payments API P1 Incident Runbook | version=3.2 | page=1 | path=data/knowledge/payments-api-p1-runbook.md
+Section: Payments API P1 Incident Runbook > Trigger and severity
+## Trigger and severity
+
+Declare a P1 when the Payments API has more than **5% HTTP 5xx responses for five consecutive minutes** and customer checkout is materially affected. Start the incident bridge and assign an incident commander. Do not treat a single failed request as a P1.
+
+--- EVIDENCE BOUNDARY ---
+[S2] doc_id=RUN-PAY-101 | title=Payments API P1 Incident Runbook | version=3.2 | page=1 | path=data/knowledge/payments-api-p1-runbook.md
+Section: Payments API P1 Incident Runbook > First ten minutes
+## First ten minutes
+1. Acknowledge the P1 page within ten minutes and record the incident ID.
+2. Check request rate, 5xx error rate, p95 latency, database pool utilization and error-budget consumption on the approved dashboards.
+3. Check the last deployment and configuration-change timestamps. Correlate them with the first increase in errors.
+4. Tell the incident commander whether the evidence suggests application saturation, dependency timeout or database connection exhaustion.
+5. Preserve trace IDs and sanitized logs. Do not paste customer tokens, card numbers or secrets into chat or an LLM.
+
+--- EVIDENCE BOUNDARY ---
+[S3] doc_id=RUN-DB-201 | title=Database Connection Pool Saturation Runbook | version=2.1 | page=1 | path=data/knowledge/database-pool-runbook.md
+Section: Database Connection Pool Saturation Runbook > Detect and verify
+## Detect and verify
+
+On `payments-api`, inspect pool active/idle/pending connections, database max connections, queue wait time and timeouts. Treat **greater than 90% utilization for five minutes** with increasing timeouts as evidence of pool saturation, not definitive root cause.
+
+--- EVIDENCE BOUNDARY ---
+[S4] doc_id=RUN-DB-201 | title=Database Connection Pool Saturation Runbook | version=2.1 | page=1 | path=data/knowledge/database-pool-runbook.md
+Section: Database Connection Pool Saturation Runbook > Triage sequence
+## Triage sequence
+1. Check for recent changes to connection pool size, request concurrency, database proxy or retry configuration.
+2. Review approved dashboards for slow queries and connection leaks; correlate with deployment time.
+3. Use read-only database diagnostics to identify long-running transactions. Do not run ad hoc destructive SQL.
+4. If the problem followed an approved configuration release, propose rollback through POL-CHG-010. An engineer does not self-approve an emergency rollback.
+5. When uncertainty remains, escalate to the database on-call and incident commander. Avoid blind restart loops that can worsen retry storms.
+
+--- EVIDENCE BOUNDARY ---
+[S5] doc_id=POL-CHG-010 | title=Emergency Production Change Policy | version=4.0 | page=1 | path=data/knowledge/emergency-change-policy.md
+Section: Emergency Production Change Policy > Approval and evidence
+## Approval and evidence
+An emergency rollback requires approval from **the incident commander and an independent on-call change approver** before execution. The change record must identify the incident, affected service, proposed rollback version, risk assessment, verification metrics, executor and approvers. The executor cannot act as the independent approver.
+If an immediate life/safety issue prevents the normal path, contact the designated executive duty officer; the workshop does not define or automate an exception.
+
+--- EVIDENCE BOUNDARY ---
+[S6] doc_id=POL-SLO-020 | title=Incident Severity and Communication Policy | version=2.3 | page=1 | path=data/knowledge/severity-and-slo-policy.md
+Section: Incident Severity and Communication Policy > Operating targets
+## Operating targets
+
+P1 on-call acknowledgement target: **10 minutes**. The incident commander owns coordination. Provide an approved customer-facing update at least **every 30 minutes** while the P1 remains open. Updates must not include credentials or personally identifiable information.
+
+--- EVIDENCE BOUNDARY ---
+[S7] doc_id=RUN-DB-201 | title=Database Connection Pool Saturation Runbook | version=2.1 | page=1 | path=data/knowledge/database-pool-runbook.md
+Section: Database Connection Pool Saturation Runbook > After mitigation
+## After mitigation
+
+Verify pool utilization falls below **75%** and payment error rate below **1%** for at least **15 minutes**. Record the change ID, evidence and observed effect. Use a staged rollback if one is approved and supported by the release procedure.
+
+
+SUB-QUERY LOG:
+[
+  {
+    "need": "p1_trigger",
+    "doc_type": "runbook",
+    "query": "P1 trigger 5xx five consecutive minutes first ten minutes checks",
+    "selected": [
+      [
+        "RUN-PAY-101",
+        "a591b64e",
+        "rrf"
+      ]
+    ]
+  },
+  {
+    "need": "immediate_checks",
+    "doc_type": "runbook",
+    "query": "first ten minutes acknowledge P1 page record incident ID request rate 5xx error rate p95 latency error-budget last deployment sanitized logs trace IDs",
+    "selected": [
+      [
+        "RUN-PAY-101",
+        "3bc60d35",
+        "section-merge"
+      ]
+    ]
+  },
+  {
+    "need": "pool_detect",
+    "doc_type": "runbook",
+    "query": "connection pool greater than 90% utilization five minutes triage recent changes",
+    "selected": [
+      [
+        "RUN-DB-201",
+        "494c9c12",
+        "rrf"
+      ]
+    ]
+  },
+  {
+    "need": "pool_triage_steps",
+    "doc_type": "runbook",
+    "query": "triage sequence recent changes pool size request concurrency slow queries connection leaks propose rollback escalate restart loops",
+    "selected": [
+      [
+        "RUN-DB-201",
+        "fce11eba",
+        "section-merge"
+      ]
+    ]
+  },
+  {
+    "need": "rollback_approval",
+    "doc_type": "policy",
+    "query": "emergency rollback approval incident commander independent change approver",
+    "selected": [
+      [
+        "POL-CHG-010",
+        "2267725a",
+        "section-merge"
+      ]
+    ]
+  },
+  {
+    "need": "customer_updates",
+    "doc_type": "policy",
+    "query": "P1 customer-facing update every 30 minutes incident commander",
+    "selected": [
+      [
+        "POL-SLO-020",
+        "80d1cbc3",
+        "rrf"
+      ]
+    ]
+  },
+  {
+    "need": "recovery_verification",
+    "doc_type": "runbook",
+    "query": "after mitigation verify utilization below 75% error rate below 1% 15 minutes",
+    "selected": [
+      [
+        "RUN-DB-201",
+        "0def8266",
+        "rrf"
+      ]
+    ]
+  }
+]
+
+SOURCE MANIFEST:
+[
+  {
+    "source_id": "S1",
+    "doc_id": "RUN-PAY-101",
+    "version": "3.2",
+    "doc_type": "runbook",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "a591b64e72e179ffb3035b62",
+    "source_path": "data/knowledge/payments-api-p1-runbook.md"
+  },
+  {
+    "source_id": "S2",
+    "doc_id": "RUN-PAY-101",
+    "version": "3.2",
+    "doc_type": "runbook",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "3bc60d35e65ca75f2527f96f+1",
+    "source_path": "data/knowledge/payments-api-p1-runbook.md"
+  },
+  {
+    "source_id": "S3",
+    "doc_id": "RUN-DB-201",
+    "version": "2.1",
+    "doc_type": "runbook",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "494c9c121d46a025927f348b",
+    "source_path": "data/knowledge/database-pool-runbook.md"
+  },
+  {
+    "source_id": "S4",
+    "doc_id": "RUN-DB-201",
+    "version": "2.1",
+    "doc_type": "runbook",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "fce11ebaefd75c93ae586d5b+1",
+    "source_path": "data/knowledge/database-pool-runbook.md"
+  },
+  {
+    "source_id": "S5",
+    "doc_id": "POL-CHG-010",
+    "version": "4.0",
+    "doc_type": "policy",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "2267725ac12a9d2c44bf501e+1",
+    "source_path": "data/knowledge/emergency-change-policy.md"
+  },
+  {
+    "source_id": "S6",
+    "doc_id": "POL-SLO-020",
+    "version": "2.3",
+    "doc_type": "policy",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "80d1cbc3c0fec32ddaf516ce",
+    "source_path": "data/knowledge/severity-and-slo-policy.md"
+  },
+  {
+    "source_id": "S7",
+    "doc_id": "RUN-DB-201",
+    "version": "2.1",
+    "doc_type": "runbook",
+    "trust": "trusted",
+    "page": 1,
+    "chunk_id": "0def826637aad86bf4fef872",
+    "source_path": "data/knowledge/database-pool-runbook.md"
+  }
+]
+
+Quarantined: []
+Dropped (did not fit whole): []
+Evidence tokens=995 (budget 1200)

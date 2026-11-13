@@ -1,0 +1,24 @@
+test_fixed_char_overlap (test_core.ChunkingTests.test_fixed_char_overlap) ... ok
+test_recursive_and_sentence_windows (test_core.ChunkingTests.test_recursive_and_sentence_windows) ... ok
+test_semantic_callback (test_core.ChunkingTests.test_semantic_callback) ... ok
+test_structural_and_parent_child (test_core.ChunkingTests.test_structural_and_parent_child) ... ok
+test_table_and_code_preserved (test_core.ChunkingTests.test_table_and_code_preserved) ... ok
+test_citation_whitelist (test_core.EvidenceTests.test_citation_whitelist) ... ok
+test_dense_passes_acl_predicates_into_store_query (test_core.EvidenceTests.test_dense_passes_acl_predicates_into_store_query) ... ok
+test_rrf_rank_based (test_core.EvidenceTests.test_rrf_rank_based) ... ok
+test_authorization_filter_must_include_tenant_status_role (test_core.LoadingTests.test_authorization_filter_must_include_tenant_status_role) ... ok
+test_catalog_has_roles_and_retired_document (test_core.LoadingTests.test_catalog_has_roles_and_retired_document) ... FAIL
+
+======================================================================
+FAIL: test_catalog_has_roles_and_retired_document (test_core.LoadingTests.test_catalog_has_roles_and_retired_document)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workshop-root>\tests\test_core.py", line 18, in test_catalog_has_roles_and_retired_document
+    self.assertTrue(all(d.metadata["source_path"].startswith("data/") for d in docs))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.314s
+
+FAILED (failures=1)

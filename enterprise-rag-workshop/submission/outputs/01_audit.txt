@@ -1,0 +1,10 @@
+doc_id        | version | status  | page | allowed_roles             | doc_type   | classification | trust   | effective_date | indexed
+--------------+---------+---------+------+---------------------------+------------+----------------+---------+----------------+--------
+RUN-PAY-101   | 3.2     | active  | 1    | engineer,operator         | runbook    | internal       | trusted | 2026-07-01     | True   
+RUN-DB-201    | 2.1     | active  | 1    | engineer,operator         | runbook    | internal       | trusted | 2026-08-05     | True   
+POL-CHG-010   | 4.0     | active  | 1    | engineer,operator,manager | policy     | internal       | trusted | 2026-06-15     | True   
+POL-SLO-020   | 2.3     | active  | 1    | engineer,operator,manager | policy     | internal       | trusted | 2026-07-12     | True   
+PM-2026-071   | 1.0     | active  | 1    | engineer,manager          | postmortem | internal       | trusted | 2026-07-17     | True   
+RUN-PAY-OLD   | 1.0     | retired | 1    | engineer,operator         | runbook    | internal       | trusted | 2024-01-01     | False  
+SEC-FRAUD-009 | 1.4     | active  | 1    | security                  | runbook    | restricted     | trusted | 2026-09-01     | True   
+7 page records; 1 excluded from index (non-active)

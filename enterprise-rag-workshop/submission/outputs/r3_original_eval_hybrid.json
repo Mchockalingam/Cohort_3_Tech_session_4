@@ -1,0 +1,158 @@
+{
+  "mode": "hybrid",
+  "k": 5,
+  "scored_question_count": 6,
+  "mean_hit_at_k": 1.0,
+  "mean_doc_recall_at_k": 1.0,
+  "mrr_at_k": 0.778,
+  "rows": [
+    {
+      "id": "q01",
+      "role": "engineer",
+      "expected": [
+        "POL-SLO-020",
+        "RUN-PAY-101"
+      ],
+      "retrieved": [
+        "RUN-PAY-101",
+        "POL-SLO-020",
+        "RUN-PAY-101",
+        "PM-2026-071",
+        "RUN-PAY-101"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "latency_ms": 384.2
+    },
+    {
+      "id": "q02",
+      "role": "engineer",
+      "expected": [
+        "RUN-DB-201"
+      ],
+      "retrieved": [
+        "RUN-PAY-101",
+        "PM-2026-071",
+        "RUN-DB-201",
+        "RUN-PAY-101",
+        "RUN-DB-201"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 0.333,
+      "latency_ms": 125.1
+    },
+    {
+      "id": "q03",
+      "role": "engineer",
+      "expected": [
+        "POL-CHG-010"
+      ],
+      "retrieved": [
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "RUN-DB-201"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "latency_ms": 77.3
+    },
+    {
+      "id": "q04",
+      "role": "operator",
+      "expected": [
+        "POL-SLO-020"
+      ],
+      "retrieved": [
+        "RUN-PAY-101",
+        "RUN-PAY-101",
+        "POL-SLO-020",
+        "POL-SLO-020",
+        "POL-CHG-010"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 0.333,
+      "latency_ms": 69.8
+    },
+    {
+      "id": "q05",
+      "role": "manager",
+      "expected": [
+        "PM-2026-071"
+      ],
+      "retrieved": [
+        "PM-2026-071",
+        "PM-2026-071",
+        "PM-2026-071",
+        "PM-2026-071",
+        "PM-2026-071"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "latency_ms": 57.0
+    },
+    {
+      "id": "q06",
+      "role": "security",
+      "expected": [
+        "SEC-FRAUD-009"
+      ],
+      "retrieved": [
+        "SEC-FRAUD-009",
+        "SEC-FRAUD-009",
+        "SEC-FRAUD-009"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "latency_ms": 53.7
+    },
+    {
+      "id": "q07",
+      "role": "engineer",
+      "expected": [],
+      "retrieved": [
+        "PM-2026-071",
+        "POL-SLO-020",
+        "RUN-DB-201",
+        "RUN-PAY-101",
+        "PM-2026-071"
+      ],
+      "should_abstain": true,
+      "hit_at_k": null,
+      "doc_recall_at_k": null,
+      "rr": null,
+      "latency_ms": 56.5
+    },
+    {
+      "id": "q08",
+      "role": "engineer",
+      "expected": [],
+      "retrieved": [
+        "POL-SLO-020",
+        "PM-2026-071",
+        "POL-SLO-020",
+        "PM-2026-071",
+        "PM-2026-071"
+      ],
+      "should_abstain": true,
+      "hit_at_k": null,
+      "doc_recall_at_k": null,
+      "rr": null,
+      "latency_ms": 42.6
+    }
+  ],
+  "note": "Cases with no expected sources require a separate answer-level abstention test."
+}
