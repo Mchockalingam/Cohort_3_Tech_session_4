@@ -1,0 +1,22 @@
+test_dispatcher_denies_write_tools_and_enforces_budget (submission.tests.test_assignment.AgentAndEvidenceTests.test_dispatcher_denies_write_tools_and_enforces_budget) ... ok
+test_incident_packet_within_budget_and_multi_source (submission.tests.test_assignment.AgentAndEvidenceTests.test_incident_packet_within_budget_and_multi_source) ... ok
+test_offline_agent_trace_is_bounded_and_read_only (submission.tests.test_assignment.AgentAndEvidenceTests.test_offline_agent_trace_is_bounded_and_read_only) ... ok
+test_engineer_cannot_but_security_can_retrieve_sec_fraud (submission.tests.test_assignment.AuthorizationTests.test_engineer_cannot_but_security_can_retrieve_sec_fraud) ... ok
+test_entitlement_revoked_between_index_and_query (submission.tests.test_assignment.AuthorizationTests.test_entitlement_revoked_between_index_and_query) ... ok
+test_retrieval_fails_closed_on_unauthorised_store_record (submission.tests.test_assignment.AuthorizationTests.test_retrieval_fails_closed_on_unauthorised_store_record) ... ok
+test_catalog_audit_columns (submission.tests.test_assignment.EvalSetTests.test_catalog_audit_columns) ... ok
+test_eval_set_has_required_categories_and_consistent_labels (submission.tests.test_assignment.EvalSetTests.test_eval_set_has_required_categories_and_consistent_labels) ... ok
+test_loader_wrapper_gives_portable_paths_and_trust (submission.tests.test_assignment.EvalSetTests.test_loader_wrapper_gives_portable_paths_and_trust) ... ok
+test_answer_guard_flags_bypass_and_canary (submission.tests.test_assignment.InjectionTests.test_answer_guard_flags_bypass_and_canary) ... ok
+test_merge_section_removes_overlap_duplicates (submission.tests.test_assignment.InjectionTests.test_merge_section_removes_overlap_duplicates) ... ok
+test_packet_drops_rather_than_truncates (submission.tests.test_assignment.InjectionTests.test_packet_drops_rather_than_truncates) ... ok
+test_untrusted_instruction_quarantined_trusted_policy_kept (submission.tests.test_assignment.InjectionTests.test_untrusted_instruction_quarantined_trusted_policy_kept) ... ok
+test_untrusted_source_labelled_in_packet_even_unscreened (submission.tests.test_assignment.InjectionTests.test_untrusted_source_labelled_in_packet_even_unscreened) ... ok
+test_reindex_is_idempotent (submission.tests.test_assignment.VersionSafetyTests.test_reindex_is_idempotent) ... ok
+test_reindex_removes_replaced_version_and_retirement (submission.tests.test_assignment.VersionSafetyTests.test_reindex_removes_replaced_version_and_retirement) ... ok
+test_retired_run_pay_old_never_indexed_or_retrieved (submission.tests.test_assignment.VersionSafetyTests.test_retired_run_pay_old_never_indexed_or_retrieved) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 4.934s
+
+OK

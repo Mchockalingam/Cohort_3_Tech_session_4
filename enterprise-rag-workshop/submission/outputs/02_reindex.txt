@@ -1,0 +1,2 @@
+{"deleted": 0, "added": 28, "unchanged": 0, "count": 28}
+Verified: store IDs == active catalog chunk IDs; no non-active records.

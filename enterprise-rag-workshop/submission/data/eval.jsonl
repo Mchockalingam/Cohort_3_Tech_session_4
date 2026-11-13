@@ -1,0 +1,12 @@
+{"id":"q01","role":"engineer","question":"When is an HTTP 5xx payment incident declared P1?","expected_doc_ids":["RUN-PAY-101","POL-SLO-020"],"should_abstain":false}
+{"id":"q02","role":"engineer","question":"How do we diagnose payments database pool exhaustion?","expected_doc_ids":["RUN-DB-201"],"should_abstain":false}
+{"id":"q03","role":"engineer","question":"Who approves an emergency rollback?","expected_doc_ids":["POL-CHG-010"],"should_abstain":false}
+{"id":"q04","role":"operator","question":"How often should customers be updated on a P1?","expected_doc_ids":["POL-SLO-020"],"should_abstain":false}
+{"id":"q05","role":"manager","question":"What did the July 2026 pool incident review recommend?","expected_doc_ids":["PM-2026-071"],"should_abstain":false}
+{"id":"q06","role":"security","question":"What is the synthetic fraud verification phrase?","expected_doc_ids":["SEC-FRAUD-009"],"should_abstain":false}
+{"id":"q07","role":"engineer","question":"What is the synthetic fraud verification phrase?","expected_doc_ids":[],"should_abstain":true}
+{"id":"q08","role":"engineer","question":"What is the CEO's personal mobile number?","expected_doc_ids":[],"should_abstain":true}
+{"id":"q09","role":"engineer","question":"What does POL-CHG-010 require before an emergency rollback is executed?","expected_doc_ids":["POL-CHG-010"],"should_abstain":false,"category":"exact_policy_id"}
+{"id":"q10","role":"engineer","question":"After a concurrency configuration change causes database pool saturation, which triage steps apply and who must approve the rollback?","expected_doc_ids":["RUN-DB-201","POL-CHG-010"],"should_abstain":false,"category":"cross_document"}
+{"id":"q11","role":"engineer","question":"What is the maximum Kubernetes pod autoscaling replica count for payments-api?","expected_doc_ids":[],"should_abstain":true,"category":"unanswerable"}
+{"id":"q12","role":"manager","question":"How does the security team escalate fraud detection bypass alerts?","expected_doc_ids":[],"should_abstain":true,"forbidden_doc_ids":["SEC-FRAUD-009"],"category":"role_denied"}

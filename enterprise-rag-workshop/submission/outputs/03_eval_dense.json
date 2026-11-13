@@ -1,0 +1,257 @@
+{
+  "mode": "dense",
+  "k": 5,
+  "eval_file": "submission/data/eval.jsonl",
+  "scored_question_count": 8,
+  "mean_hit_at_k": 1.0,
+  "mean_doc_recall_at_k": 0.938,
+  "mrr_at_k": 1.0,
+  "forbidden_leak_count": 0,
+  "rows": [
+    {
+      "id": "q01",
+      "category": "seed",
+      "role": "engineer",
+      "expected": [
+        "POL-SLO-020",
+        "RUN-PAY-101"
+      ],
+      "retrieved": [
+        "RUN-PAY-101",
+        "POL-SLO-020",
+        "RUN-PAY-101",
+        "RUN-PAY-101",
+        "RUN-PAY-101"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 251.5
+    },
+    {
+      "id": "q02",
+      "category": "seed",
+      "role": "engineer",
+      "expected": [
+        "RUN-DB-201"
+      ],
+      "retrieved": [
+        "RUN-DB-201",
+        "RUN-PAY-101",
+        "RUN-DB-201",
+        "PM-2026-071",
+        "RUN-DB-201"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 107.5
+    },
+    {
+      "id": "q03",
+      "category": "seed",
+      "role": "engineer",
+      "expected": [
+        "POL-CHG-010"
+      ],
+      "retrieved": [
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "POL-CHG-010"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 51.5
+    },
+    {
+      "id": "q04",
+      "category": "seed",
+      "role": "operator",
+      "expected": [
+        "POL-SLO-020"
+      ],
+      "retrieved": [
+        "POL-SLO-020",
+        "POL-SLO-020",
+        "RUN-PAY-101",
+        "RUN-PAY-101",
+        "RUN-PAY-101"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 82.5
+    },
+    {
+      "id": "q05",
+      "category": "seed",
+      "role": "manager",
+      "expected": [
+        "PM-2026-071"
+      ],
+      "retrieved": [
+        "PM-2026-071",
+        "PM-2026-071",
+        "PM-2026-071",
+        "PM-2026-071",
+        "PM-2026-071"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 61.1
+    },
+    {
+      "id": "q06",
+      "category": "seed",
+      "role": "security",
+      "expected": [
+        "SEC-FRAUD-009"
+      ],
+      "retrieved": [
+        "SEC-FRAUD-009",
+        "SEC-FRAUD-009",
+        "SEC-FRAUD-009"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 57.4
+    },
+    {
+      "id": "q07",
+      "category": "seed",
+      "role": "engineer",
+      "expected": [],
+      "retrieved": [
+        "PM-2026-071",
+        "RUN-PAY-101",
+        "POL-SLO-020",
+        "RUN-DB-201",
+        "PM-2026-071"
+      ],
+      "should_abstain": true,
+      "hit_at_k": null,
+      "doc_recall_at_k": null,
+      "rr": null,
+      "forbidden_leaks": [],
+      "latency_ms": 44.2
+    },
+    {
+      "id": "q08",
+      "category": "seed",
+      "role": "engineer",
+      "expected": [],
+      "retrieved": [
+        "POL-SLO-020",
+        "POL-SLO-020",
+        "PM-2026-071",
+        "RUN-PAY-101",
+        "RUN-PAY-101"
+      ],
+      "should_abstain": true,
+      "hit_at_k": null,
+      "doc_recall_at_k": null,
+      "rr": null,
+      "forbidden_leaks": [],
+      "latency_ms": 46.0
+    },
+    {
+      "id": "q09",
+      "category": "exact_policy_id",
+      "role": "engineer",
+      "expected": [
+        "POL-CHG-010"
+      ],
+      "retrieved": [
+        "POL-CHG-010",
+        "RUN-PAY-101",
+        "POL-CHG-010",
+        "POL-CHG-010",
+        "RUN-DB-201"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 1.0,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 44.6
+    },
+    {
+      "id": "q10",
+      "category": "cross_document",
+      "role": "engineer",
+      "expected": [
+        "POL-CHG-010",
+        "RUN-DB-201"
+      ],
+      "retrieved": [
+        "RUN-DB-201",
+        "PM-2026-071",
+        "PM-2026-071",
+        "RUN-DB-201",
+        "PM-2026-071"
+      ],
+      "should_abstain": false,
+      "hit_at_k": 1,
+      "doc_recall_at_k": 0.5,
+      "rr": 1.0,
+      "forbidden_leaks": [],
+      "latency_ms": 42.0
+    },
+    {
+      "id": "q11",
+      "category": "unanswerable",
+      "role": "engineer",
+      "expected": [],
+      "retrieved": [
+        "RUN-DB-201",
+        "RUN-PAY-101",
+        "RUN-PAY-101",
+        "RUN-PAY-101",
+        "RUN-PAY-101"
+      ],
+      "should_abstain": true,
+      "hit_at_k": null,
+      "doc_recall_at_k": null,
+      "rr": null,
+      "forbidden_leaks": [],
+      "latency_ms": 33.3
+    },
+    {
+      "id": "q12",
+      "category": "role_denied",
+      "role": "manager",
+      "expected": [],
+      "retrieved": [
+        "POL-SLO-020",
+        "POL-SLO-020",
+        "POL-CHG-010",
+        "PM-2026-071",
+        "PM-2026-071"
+      ],
+      "should_abstain": true,
+      "hit_at_k": null,
+      "doc_recall_at_k": null,
+      "rr": null,
+      "forbidden_leaks": [],
+      "latency_ms": 30.7
+    }
+  ],
+  "note": "Unanswerable/role-denied rows are scored by the separate `abstention` command."
+}

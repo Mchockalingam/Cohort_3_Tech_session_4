@@ -1,0 +1,150 @@
+{
+  "abstention_correct": "4/4",
+  "false_abstentions_on_answerable": "3/8",
+  "rows": [
+    {
+      "id": "q01",
+      "role": "engineer",
+      "should_abstain": false,
+      "abstained": false,
+      "correct": true,
+      "answer": true,
+      "dense": 0.69,
+      "overlap": 0.67,
+      "top_doc": "RUN-PAY-101",
+      "reason": "sufficient"
+    },
+    {
+      "id": "q02",
+      "role": "engineer",
+      "should_abstain": false,
+      "abstained": true,
+      "correct": false,
+      "answer": false,
+      "dense": 0.719,
+      "overlap": 0.4,
+      "top_doc": "RUN-DB-201",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    },
+    {
+      "id": "q03",
+      "role": "engineer",
+      "should_abstain": false,
+      "abstained": false,
+      "correct": true,
+      "answer": true,
+      "dense": 0.693,
+      "overlap": 0.67,
+      "top_doc": "POL-CHG-010",
+      "reason": "sufficient"
+    },
+    {
+      "id": "q04",
+      "role": "operator",
+      "should_abstain": false,
+      "abstained": true,
+      "correct": false,
+      "answer": false,
+      "dense": 0.475,
+      "overlap": 0.25,
+      "top_doc": "POL-SLO-020",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    },
+    {
+      "id": "q05",
+      "role": "manager",
+      "should_abstain": false,
+      "abstained": false,
+      "correct": true,
+      "answer": true,
+      "dense": 0.67,
+      "overlap": 0.71,
+      "top_doc": "PM-2026-071",
+      "reason": "sufficient"
+    },
+    {
+      "id": "q06",
+      "role": "security",
+      "should_abstain": false,
+      "abstained": false,
+      "correct": true,
+      "answer": true,
+      "dense": 0.625,
+      "overlap": 1.0,
+      "top_doc": "SEC-FRAUD-009",
+      "reason": "sufficient"
+    },
+    {
+      "id": "q07",
+      "role": "engineer",
+      "should_abstain": true,
+      "abstained": true,
+      "correct": true,
+      "answer": false,
+      "dense": 0.262,
+      "overlap": 0.0,
+      "top_doc": "PM-2026-071",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    },
+    {
+      "id": "q08",
+      "role": "engineer",
+      "should_abstain": true,
+      "abstained": true,
+      "correct": true,
+      "answer": false,
+      "dense": 0.278,
+      "overlap": 0.0,
+      "top_doc": "POL-SLO-020",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    },
+    {
+      "id": "q09",
+      "role": "engineer",
+      "should_abstain": false,
+      "abstained": false,
+      "correct": true,
+      "answer": true,
+      "dense": 0.519,
+      "overlap": 0.5,
+      "top_doc": "POL-CHG-010",
+      "reason": "sufficient"
+    },
+    {
+      "id": "q10",
+      "role": "engineer",
+      "should_abstain": false,
+      "abstained": true,
+      "correct": false,
+      "answer": false,
+      "dense": 0.665,
+      "overlap": 0.43,
+      "top_doc": "RUN-DB-201",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    },
+    {
+      "id": "q11",
+      "role": "engineer",
+      "should_abstain": true,
+      "abstained": true,
+      "correct": true,
+      "answer": false,
+      "dense": 0.306,
+      "overlap": 0.14,
+      "top_doc": "RUN-DB-201",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    },
+    {
+      "id": "q12",
+      "role": "manager",
+      "should_abstain": true,
+      "abstained": true,
+      "correct": true,
+      "answer": false,
+      "dense": 0.318,
+      "overlap": 0.0,
+      "top_doc": "POL-SLO-020",
+      "reason": "below gate (dense>=0.45, overlap>=0.5)"
+    }
+  ]
+}
